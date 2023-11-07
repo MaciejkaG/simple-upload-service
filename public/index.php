@@ -21,8 +21,12 @@
     <h1>Uploaded files</h1>
     <p>
         <?php
-            foreach ($dirList as $fName) {
-                echo "<a href=\"file.php?name=$fName\">$fName</a><br>"; // Pętla wyświetlająca każdy element z $dirList w formie linku
+            if (empty($dirList)) { // Wyświetl ładną wiadomość, jeśli lista plików jest pusta
+                echo "Nothing to see here (yet)";
+            } else {
+                foreach ($dirList as $fName) {
+                    echo "<a href=\"file.php?name=$fName\">$fName</a><br>"; // Pętla wyświetlająca każdy element z $dirList w formie linku
+                }
             }
         ?>
     </p>

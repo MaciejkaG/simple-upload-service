@@ -1,6 +1,6 @@
 <?php
     $filesDir = "../files/"; // Musi kończyć się slashem!
-    $redirectRoute = "/upload" // Adres względny do któego ma przekierować, jeżeli masz index.php w public/upload to powinno być to /upload
+    $redirectRoute = "/upload"; // Adres względny do któego ma przekierować, jeżeli masz index.php w public/upload to powinno być to /upload
 
     $targetFile = $filesDir . basename($_FILES["file"]["name"]); // Ustawienie zmiennej $targetFile odpowiedniej $filesDir + nazwa przesłanego pliku
     if (isset($_POST["submit"])) { // Jeżeli to faktycznie jest formularz
