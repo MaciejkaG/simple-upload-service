@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload service</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <h1>Upload a file</h1>
@@ -25,7 +26,8 @@
                 echo "Nothing to see here (yet)";
             } else {
                 foreach ($dirList as $fName) {
-                    echo "<a href=\"file.php?name=$fName\">$fName</a><br>"; // Pętla wyświetlająca każdy element z $dirList w formie linku
+                    $uriFname = urlencode($fName);
+                    echo "<a href=\"file.php?name=$fName\">$fName</a><a href=\"remove.php?fname=$uriFname\"><span class=\"material-symbols-outlined\">delete</span></a><br>"; // Pętla wyświetlająca każdy element z $dirList w formie linku
                 }
             }
         ?>

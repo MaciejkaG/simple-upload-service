@@ -13,7 +13,7 @@
                 echo "Sorry, there was an error uploading your file.";
             }
         } else {
-            http_response_code(403);
+            http_response_code(409);
             echo "409 - Resource already exists (file already exists)";
         }
     }
